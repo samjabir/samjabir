@@ -3,18 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sam Jabir - Designer | Photoghrapher</title>
+    <title>Animated Grid Previews | Codrops</title>
     <meta
       name="description"
-      content="Some ideas for progressive hover effects on various elements"
+      content="A layout where one can switch between image grid previews."
     />
     <meta
       name="keywords"
-      content="hover, proximity, progressive, feedback, effect, web development, css, javascript"
+      content="image grid, css grid, animation, parallax, layout, template"
     />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton|Niramit:400,600,700"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script>
       document.documentElement.className = "js";
@@ -33,10 +36,14 @@
           e
         );
       };
-      supportsCssVars() || alert("Please view this demo in a modern browser");
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
     </script>
+    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
   </head>
-  <body class="demo-4">
+  <body class="loading">
     <svg class="hidden">
       <symbol id="icon-arrow" viewBox="0 0 24 24">
         <title>arrow</title>
@@ -44,58 +51,296 @@
           points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "
         />
       </symbol>
-      <symbol id="icon-drop" viewBox="0 0 24 24">
-        <title>drop</title>
-        <path
-          d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"
-        />
-        <path
-          d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"
-        />
-      </symbol>
-      <svg id="icon-github" viewBox="0 0 33 33">
-        <title>github</title>
-        <path
-          d="M16.608.455C7.614.455.32 7.748.32 16.745c0 7.197 4.667 13.302 11.14 15.456.815.15 1.112-.353 1.112-.785 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184-.741-1.882-1.809-2.383-1.809-2.383-1.479-1.01.112-.99.112-.99 1.635.115 2.495 1.679 2.495 1.679 1.453 2.489 3.813 1.77 4.741 1.353.148-1.052.569-1.77 1.034-2.177-3.617-.411-7.42-1.809-7.42-8.051 0-1.778.635-3.233 1.677-4.371-.168-.412-.727-2.069.16-4.311 0 0 1.367-.438 4.479 1.67a15.602 15.602 0 0 1 4.078-.549 15.62 15.62 0 0 1 4.078.549c3.11-2.108 4.475-1.67 4.475-1.67.889 2.242.33 3.899.163 4.311C26.37 12.66 27 14.115 27 15.893c0 6.258-3.809 7.635-7.437 8.038.584.503 1.105 1.497 1.105 3.017 0 2.177-.02 3.934-.02 4.468 0 .436.294.943 1.12.784 6.468-2.159 11.131-8.26 11.131-15.455 0-8.997-7.294-16.29-16.291-16.29"
-        ></path>
-      </svg>
-      <symbol id="icon-menu" viewBox="0 0 14 37">
-        <title>menu</title>
-        <path d="M13.95.94v36.01h-3.858V.94zM3.919.94v36.01H.06V.94z" />
-      </symbol>
     </svg>
     <main>
-      <div class="content content--fixed">
-        <header class="codrops-header">
-          <div class="codrops-links">
-            <a
-              class="codrops-icon codrops-icon--drop"
-              title="Designer | Photoghrapher"
-              ><img src="img/pap.png" alt="" style="width: 30px; height: 30px;"
-            /></a>
-          </div>
-          <h1 class="codrops-header__title">Sam Jabir</h1>
-        </header>
+      <div class="frame">
+        <h2 class="pageheader">Sam Jabir</h2>
+        <nav class="menutop">
+          <a class="menutop__item">skills</a>
+          <a class="menutop__item">contact</a>
+          <a class="menutop__item menutop__item--tw">tw</a>
+          <a class="menutop__item menutop__item--fb">fb</a>
+          <a class="menutop__item menutop__item--ig">ig</a>
+        </nav>
       </div>
       <nav class="menu">
-        <div class="menu__button-wrap">
-          <button class="menu__button">
-            <svg class="icon icon--menu">
-              <use xlink:href="#icon-menu"></use>
+        <div class="menu__item">
+          <span class="menu__item-textwrap"
+            ><span class="menu__item-text">Architectural</span></span
+          >
+          <a class="menu__item-link">explore</a>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-textwrap"
+            ><span class="menu__item-text">Mixer</span></span
+          >
+          <a class="menu__item-link">explore</a>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-textwrap"
+            ><span class="menu__item-text">Objects</span></span
+          >
+          <a class="menu__item-link">explore</a>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-textwrap"
+            ><span class="menu__item-text">Delta</span></span
+          >
+          <a class="menu__item-link">explore</a>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-textwrap"
+            ><span class="menu__item-text">Express</span></span
+          >
+          <a class="menu__item-link">explore</a>
+        </div>
+      </nav>
+      <div class="page page--preview">
+        <div class="gridwrap">
+          <div class="grid grid--layout-1">
+            <div
+              class="grid__item"
+              style="background-image: url(img/1.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/2.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/3.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/4.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/5.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/6.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/7.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/8.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/9.jpg)"
+            ></div>
+          </div>
+          <div class="grid grid--layout-2">
+            <div
+              class="grid__item"
+              style="background-image: url(img/10.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/11.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/12.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/13.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/14.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/15.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/16.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/17.jpg)"
+            ></div>
+          </div>
+          <div class="grid grid--layout-3">
+            <div
+              class="grid__item"
+              style="background-image: url(img/18.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/19.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/20.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/21.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/22.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/23.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/24.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/42.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/43.jpg)"
+            ></div>
+          </div>
+          <div class="grid grid--layout-4">
+            <div
+              class="grid__item"
+              style="background-image: url(img/25.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/26.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/27.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/28.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/29.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/30.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/31.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/32.jpg)"
+            ></div>
+          </div>
+          <div class="grid grid--layout-5">
+            <div
+              class="grid__item"
+              style="background-image: url(img/33.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/34.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/35.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/36.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/37.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/38.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/39.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/40.jpg)"
+            ></div>
+            <div
+              class="grid__item"
+              style="background-image: url(img/41.jpg)"
+            ></div>
+          </div>
+          <button class="gridback">
+            <svg class="icon icon--arrow">
+              <use xlink:href="#icon-arrow"></use>
             </svg>
           </button>
         </div>
-        <div class="menu__inner">
-          <a href="#" class="menu__item">My Story</a>
-          <a href="#" class="menu__item">Skills</a>
-          <a href="#" class="menu__item">Portfolio</a>
-          <a href="#" class="menu__item">Contact</a>
+        <!-- /gridwrap -->
+        <div class="content">
+          <div class="content__item">
+            Emerged into consciousness tesseract invent the universe Cambrian
+            explosion how far away from which we spring? Brain is the seed of
+            intelligence white dwarf inconspicuous motes of rock and gas two
+            ghostly white figures in coveralls and helmets are soflty dancing
+            extraordinary claims require extraordinary evidence dispassionate
+            extraterrestrial observer. Hundreds of thousands great turbulent
+            clouds concept of the number one made in the interiors of collapsing
+            stars the sky calls to us encyclopaedia galactica.
+          </div>
+          <div class="content__item">
+            Billions upon billions cosmic ocean prime number descended from
+            astronomers finite but unbounded Euclid? White dwarf hearts of the
+            stars the carbon in our apple pies a very small stage in a vast
+            cosmic arena brain is the seed of intelligence permanence of the
+            stars? Vastness is bearable only through love concept of the number
+            one Sea of Tranquility courage of our questions how far away a still
+            more glorious dawn awaits.
+          </div>
+          <div class="content__item">
+            At the edge of forever white dwarf a mote of dust suspended in a
+            sunbeam citizens of distant epochs take root and flourish tesseract.
+            Bits of moving fluff rings of Uranus across the centuries tendrils
+            of gossamer clouds made in the interiors of collapsing stars muse
+            about. A very small stage in a vast cosmic arena emerged into
+            consciousness network of wormholes network of wormholes
+            dispassionate extraterrestrial observer emerged into consciousness.
+          </div>
+          <div class="content__item">
+            Explorations Apollonius of Perga Sea of Tranquility great turbulent
+            clouds realm of the galaxies two ghostly white figures in coveralls
+            and helmets are soflty dancing. Dispassionate extraterrestrial
+            observer are creatures of the cosmos a mote of dust suspended in a
+            sunbeam hundreds of thousands extraordinary claims require
+            extraordinary evidence something incredible is waiting to be known.
+            Citizens of distant epochs dispassionate extraterrestrial observer
+            something incredible is waiting to be known of brilliant syntheses
+            network of wormholes rich in heavy atoms.
+          </div>
+          <div class="content__item">
+            Hundreds of thousands take root and flourish tingling of the spine
+            consciousness ship of the imagination paroxysm of global death. Rich
+            in mystery realm of the galaxies realm of the galaxies something
+            incredible is waiting to be known hearts of the stars rich in
+            mystery? Kindling the energy hidden in matter the carbon in our
+            apple pies Cambrian explosion the sky calls to us encyclopaedia
+            galactica citizens of distant epochs.
+          </div>
         </div>
-      </nav>
+      </div>
+      <!-- /page -->
     </main>
-    <script src="js/demo.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
-    <script src="js/nearby.js"></script>
-    <script src="main.js"></script>
+    <script src="js/demo.js"></script>
   </body>
 </html>
